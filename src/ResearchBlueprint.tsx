@@ -581,15 +581,13 @@ export default function ResearchBlueprint() {
   );
   const edges = useMemo<Edge[]>(
     () =>
-      layers
-        .slice(0, -1)
-        .map((_, i) => ({
-          id: `e${i}`,
-          source: `l${i}`,
-          target: `l${i + 1}`,
-          animated: true,
-          style: { stroke: "#8170D2", strokeWidth: 2 },
-        })),
+      layers.slice(0, -1).map((_, i) => ({
+        id: `e${i}`,
+        source: `l${i}`,
+        target: `l${i + 1}`,
+        animated: true,
+        style: { stroke: "#8170D2", strokeWidth: 2 },
+      })),
     [],
   );
   const totals = chosen
@@ -629,9 +627,10 @@ export default function ResearchBlueprint() {
           participatory simulation and living-lab experimentation.
         </Typography>
         <Typography>
-          UrbanCool AI will be developed through a staged programme connecting
-          environmental sensing, plant physiology, occupant behaviour, AI
-          control, stakeholder decisions and real-world building performance.
+          AI FOR ECOURBANISM will be developed through a staged programme
+          connecting environmental sensing, plant physiology, occupant
+          behaviour, AI control, stakeholder decisions and real-world building
+          performance.
         </Typography>
         <Stack direction={{ xs: "column", sm: "row" }} gap={1.5}>
           <Button variant="contained" href="#blueprint">
@@ -1373,7 +1372,7 @@ export default function ResearchBlueprint() {
             ],
             [
               "Technical outputs",
-              "UrbanCool AI prototype",
+              "AI FOR ECOURBANISM prototype",
               "Sensor framework",
               "Multi-agent control design",
               "Optimisation engine",

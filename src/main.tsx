@@ -1542,7 +1542,7 @@ function Stakeholders() {
             </Box>
             <ArrowForward />
             <Box className="violet">
-              <b>UrbanCool AI</b>
+              <b>AI FOR ECOURBANISM</b>
               <span>Simulated analysis & options</span>
             </Box>
             <ArrowForward />
@@ -1575,7 +1575,7 @@ function Project() {
     ],
     [
       "Proposed solution",
-      "UrbanCool AI combines environmental data, simulated AI-agent analysis, nature-based solutions, biomimicry and resource optimisation to support equitable urban heat mitigation.",
+      "AI FOR ECOURBANISM combines environmental data, simulated AI-agent analysis, nature-based solutions, biomimicry and resource optimisation to support equitable urban heat mitigation.",
     ],
     [
       "Research gap",
@@ -1600,8 +1600,8 @@ function Project() {
           needs are planned together.
         </Typography>
         <Typography>
-          UrbanCool AI is a university innovation prototype for transparent,
-          resource-aware heat mitigation decisions.
+          AI FOR ECOURBANISM is a university innovation prototype for
+          transparent, resource-aware heat mitigation decisions.
         </Typography>
       </Box>
       <Box className="project-grid">
@@ -1719,7 +1719,7 @@ function ResponsiveAppLayout() {
           <LandscapeOutlined />
         </Box>
         <Box>
-          <Typography variant="h6">UrbanCool AI</Typography>
+          <Typography variant="h6">AI FOR ECOURBANISM</Typography>
           <Typography variant="caption">
             AI-powered urban cooling
             <br />
@@ -1760,7 +1760,7 @@ function ResponsiveAppLayout() {
             <IconButton onClick={() => setOpen(true)}>
               <Menu />
             </IconButton>
-            <b>UrbanCool AI</b>
+            <b>AI FOR ECOURBANISM</b>
           </Box>
           <Drawer open={open} onClose={() => setOpen(false)}>
             {drawer}
@@ -1812,8 +1812,8 @@ function ResponsiveAppLayout() {
           <Route path="/research" element={<ResearchBlueprint />} />
         </Routes>
         <Typography className="footer" variant="caption">
-          UrbanCool AI · University innovation prototype · No live AI, sensor or
-          scientific prediction services are connected.
+          AI FOR ECOURBANISM · University innovation prototype · No live AI,
+          sensor or scientific prediction services are connected.
         </Typography>
       </Box>
       <Dialog
@@ -1847,9 +1847,9 @@ function ResponsiveAppLayout() {
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
-          <HashRouter>
+      <HashRouter>
         <ResponsiveAppLayout />
-          </HashRouter>
+      </HashRouter>
     </ThemeProvider>
   </React.StrictMode>,
 );

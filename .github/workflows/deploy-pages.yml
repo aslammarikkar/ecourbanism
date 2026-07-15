@@ -1,4 +1,4 @@
-name: Deploy UrbanCool AI to GitHub Pages
+name: Deploy AI FOR ECOURBANISM to GitHub Pages
 
 on:
   push:

@@ -1,4 +1,4 @@
-# UrbanCool AI
+# AI FOR ECOURBANISM
 
 Live site: **https://oshinit.github.io/ecourbanism/**
 
