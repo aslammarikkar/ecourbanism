@@ -1,0 +1,309 @@
+.method-intro {
+  max-width: 1050px;
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+.cycle-alert {
+  margin: 20px 0;
+}
+.cycle-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(350px, 0.65fr);
+  gap: 20px;
+  align-items: start;
+}
+.cycle-diagram {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 46px 16px;
+}
+.cycle-item {
+  position: relative;
+  transition: 0.25s;
+}
+.cycle-item.dimmed {
+  opacity: 0.58;
+}
+.cycle-item.selected {
+  opacity: 1;
+}
+.cycle-item > .MuiButton-root {
+  width: 100%;
+  height: 100%;
+  min-height: 185px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  padding: 18px;
+  background: #fff;
+  border: 2px solid #e4e2ec;
+  color: #272733;
+  box-shadow: 0 4px 18px #25203c0d;
+}
+.cycle-item.selected > .MuiButton-root {
+  border-color: #6952d5;
+  background: #f4f1ff;
+  box-shadow: 0 8px 24px #6952d526;
+}
+.cycle-item .stage-number {
+  display: grid;
+  place-items: center;
+  min-width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #6952d5;
+  color: #fff;
+  font-weight: 800;
+  margin-right: 11px;
+}
+.cycle-item button > span:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.cycle-item small {
+  color: #6f6f7b;
+  line-height: 1.35;
+}
+.cycle-item em {
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 750;
+  color: #6952d5;
+}
+.flow-connector {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  left: calc(100% + 3px);
+  top: 70px;
+  width: 19px;
+  color: #aaa;
+}
+.flow-connector span {
+  display: none;
+}
+.flow-connector.active {
+  color: #6952d5;
+}
+.cycle-item:nth-child(3) .flow-connector {
+  left: 50%;
+  top: calc(100% + 5px);
+  transform: rotate(90deg);
+}
+.feedback-loop {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-top: 18px;
+  padding: 16px;
+  border: 2px dashed #2f9d70;
+  border-radius: 14px;
+  background: #edf8f2;
+  color: #267c59;
+}
+.feedback-loop svg {
+  font-size: 34px;
+}
+.feedback-loop div {
+  display: flex;
+  flex-direction: column;
+}
+.feedback-loop span {
+  font-size: 13px;
+  color: #4f6f61;
+}
+.desktop-stage-detail {
+  position: sticky;
+  top: 76px;
+}
+.stage-detail .MuiAccordion-root:before {
+  display: none;
+}
+.validation-box,
+.failure-box {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+  padding: 12px;
+  border-radius: 10px;
+  background: #edf8f2;
+}
+.failure-box {
+  background: #fff5e7;
+}
+.validation-box span,
+.failure-box span {
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+}
+.concept-callout {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  margin-top: 26px;
+  padding: 22px;
+  border-radius: 15px;
+  background: #242235;
+  color: #fff;
+}
+.concept-callout svg {
+  color: #a99af3;
+}
+.evidence-ladder {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 8px;
+  margin-top: 16px;
+}
+.evidence-ladder > div {
+  min-height: 110px;
+  display: flex;
+  flex-direction: column;
+  padding: 13px;
+  background: #fff;
+  border: 1px solid #e6e5ec;
+  border-top: 4px solid #6952d5;
+  border-radius: 10px;
+}
+.evidence-ladder span {
+  color: #6952d5;
+  font-weight: 800;
+}
+.evidence-ladder small {
+  color: #777;
+  margin-top: auto;
+}
+.gate-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 16px;
+}
+.fallback-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+.classroom-example {
+  margin-top: 28px !important;
+  border: 1px solid #dcd6f8 !important;
+  border-radius: 15px !important;
+}
+.example-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.funding-risk {
+  margin-top: 28px;
+  background: linear-gradient(135deg, #302174, #6952d5) !important;
+  color: #fff !important;
+}
+.funding-risk > div {
+  padding: 32px;
+}
+.funding-risk p {
+  max-width: 1050px;
+  color: #ffffffd9;
+}
+.benefit-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 22px;
+}
+.benefit-grid > div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px;
+  background: #ffffff17;
+  border-radius: 10px;
+}
+.benefit-grid svg {
+  color: #8ee0b8;
+}
+@media (max-width: 1199.95px) {
+  .cycle-layout {
+    grid-template-columns: 1fr;
+  }
+  .cycle-diagram {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .evidence-ladder {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .benefit-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 899.95px) {
+  .cycle-diagram {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .cycle-item:nth-child(3) .flow-connector {
+    left: calc(100% + 3px);
+    top: 70px;
+    transform: none;
+  }
+  .cycle-item:nth-child(2n) .flow-connector {
+    left: 50%;
+    top: calc(100% + 5px);
+    transform: rotate(90deg);
+  }
+  .example-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 599.95px) {
+  .cycle-diagram {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+  .cycle-item > .MuiButton-root {
+    min-height: 0;
+  }
+  .cycle-item:nth-child(n) .flow-connector {
+    left: 0;
+    right: 0;
+    top: calc(100% + 6px);
+    width: 100%;
+    transform: none;
+    flex-direction: column;
+  }
+  .flow-connector span {
+    display: block;
+    max-width: 280px;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 700;
+    color: #6c6591;
+  }
+  .feedback-loop {
+    margin-top: 58px;
+  }
+  .evidence-ladder,
+  .gate-grid,
+  .example-grid,
+  .benefit-grid {
+    grid-template-columns: 1fr;
+  }
+  .concept-callout {
+    padding: 17px;
+  }
+  .funding-risk > div {
+    padding: 20px;
+  }
+  .funding-risk h4 {
+    font-size: 1.55rem;
+  }
+  .evidence-ladder > div {
+    min-height: 86px;
+  }
+}

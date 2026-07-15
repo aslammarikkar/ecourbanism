@@ -63,6 +63,7 @@ import {
   YAxis,
 } from "recharts";
 import "./research.css";
+import ConnectedMethodology from "./ConnectedMethodology";
 
 type Method = {
   name: string;
@@ -749,52 +750,7 @@ export default function ResearchBlueprint() {
         </Drawer>
       </section>
 
-      <section id="methods">
-        <SectionTitle
-          kicker="02 · RESEARCH METHODOLOGY"
-          title="Four connected methods"
-          desc="Simulation creates hypotheses; participation refines them; experiments test them."
-        />
-        <Box className="method-grid">
-          {methods.map((m) => (
-            <Card key={m.name}>
-              <CardContent>
-                <Chip label={m.readiness} color="primary" />
-                <Typography variant="h5" mt={2}>
-                  {m.name}
-                </Typography>
-                <Typography color="text.secondary" mt={1}>
-                  {m.purpose}
-                </Typography>
-                <Alert severity="info" sx={{ my: 2 }}>
-                  <b>Research question:</b> {m.question}
-                </Alert>
-                {[
-                  ["Inputs", m.inputs],
-                  ["Activities", m.activities],
-                  ["Outputs", m.outputs],
-                ].map((x) => (
-                  <Accordion key={x[0] as string} disableGutters elevation={0}>
-                    <AccordionSummary expandIcon={<ExpandMore />}>
-                      <b>{x[0] as string}</b>
-                    </AccordionSummary>
-                    <AccordionDetails>
-                      {(x[1] as string[]).map((y) => (
-                        <Typography variant="body2" key={y}>
-                          • {y}
-                        </Typography>
-                      ))}
-                    </AccordionDetails>
-                  </Accordion>
-                ))}
-                <Typography variant="caption" color="text.secondary">
-                  <b>Limitation:</b> {m.limitations}
-                </Typography>
-              </CardContent>
-            </Card>
-          ))}
-        </Box>
-      </section>
+      <ConnectedMethodology />
 
       <section id="phases">
         <SectionTitle
