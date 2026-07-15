@@ -1,4 +1,4 @@
-# AI FOR ECOURBANISM
+# OPTICOOL
 
 Live site: **https://oshinit.github.io/ecourbanism/**
 

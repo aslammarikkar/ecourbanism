@@ -628,10 +628,9 @@ export default function ResearchBlueprint() {
           participatory simulation and living-lab experimentation.
         </Typography>
         <Typography>
-          AI FOR ECOURBANISM will be developed through a staged programme
-          connecting environmental sensing, plant physiology, occupant
-          behaviour, AI control, stakeholder decisions and real-world building
-          performance.
+          OPTICOOL will be developed through a staged programme connecting
+          environmental sensing, plant physiology, occupant behaviour, AI
+          control, stakeholder decisions and real-world building performance.
         </Typography>
         <Stack direction={{ xs: "column", sm: "row" }} gap={1.5}>
           <Button variant="contained" href="#blueprint">
@@ -1328,7 +1327,7 @@ export default function ResearchBlueprint() {
             ],
             [
               "Technical outputs",
-              "AI FOR ECOURBANISM prototype",
+              "OPTICOOL prototype",
               "Sensor framework",
               "Multi-agent control design",
               "Optimisation engine",
