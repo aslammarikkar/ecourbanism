@@ -1,0 +1,425 @@
+.digital-twin-page {
+  max-width: 1600px;
+  margin: auto;
+}
+.twin-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 210px;
+  gap: 30px;
+  padding: 34px;
+  background: linear-gradient(135deg, #fff, #eeeafe);
+  border: 1px solid #ded9f5;
+  border-radius: 20px;
+  margin-bottom: 16px;
+}
+.twin-hero h3 {
+  font-weight: 780;
+  letter-spacing: -0.04em;
+}
+.twin-hero h6 {
+  max-width: 900px;
+  margin: 8px 0;
+  color: #4d4d5b;
+}
+.preset-row {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 16px 0;
+}
+.twin-main {
+  display: grid;
+  grid-template-columns: minmax(255px, 0.7fr) minmax(480px, 1.6fr) minmax(
+      260px,
+      0.7fr
+    );
+  gap: 16px;
+  align-items: start;
+}
+.twin-controls,
+.twin-results {
+  position: sticky;
+  top: 16px;
+}
+.control-panel .MuiAccordion-root {
+  box-shadow: none;
+}
+.twin-kpis {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 12px;
+}
+.twin-kpis .MuiCardContent-root {
+  padding: 11px !important;
+  display: flex;
+  flex-direction: column;
+}
+.twin-kpis small {
+  font-size: 9px;
+  color: #6952d5;
+}
+.twin-kpis .MuiTypography-caption {
+  color: #777;
+}
+.twin-canvas-card {
+  overflow: hidden;
+}
+.twin-site {
+  position: relative;
+  min-height: 590px;
+  margin-top: 18px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: linear-gradient(
+    155deg,
+    #deddda 0 17%,
+    #bab9b3 17% 28%,
+    #d9cfb7 28% 100%
+  );
+  perspective: 900px;
+}
+.twin-roof {
+  position: absolute;
+  z-index: 3;
+  left: 23%;
+  top: 7%;
+  width: 54%;
+  height: 16%;
+  border: 0;
+  border-radius: 8px;
+  background: #797a82;
+  color: #fff;
+  transform: skewX(-8deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.twin-roof.greened {
+  background: repeating-linear-gradient(
+    90deg,
+    #438f68,
+    #438f68 12px,
+    #58aa78 12px,
+    #58aa78 20px
+  );
+}
+.twin-roof span {
+  font-size: 10px;
+}
+.building-grid {
+  position: absolute;
+  z-index: 2;
+  left: 19%;
+  right: 18%;
+  top: 20%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  transform: rotateX(4deg);
+}
+.thermal-zone {
+  position: relative;
+  min-height: 120px;
+  border: 3px solid #fff9;
+  background: color-mix(in srgb, var(--heat) 76%, white);
+  color: #24242e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition:
+    background 0.45s,
+    transform 0.2s;
+  cursor: pointer;
+}
+.thermal-zone:hover,
+.thermal-zone:focus-visible {
+  transform: scale(1.025);
+  z-index: 5;
+}
+.thermal-zone strong {
+  font-size: 1.45rem;
+}
+.thermal-zone small,
+.thermal-zone i {
+  font-size: 10px;
+}
+.living-wall {
+  position: absolute;
+  z-index: 4;
+  left: 14%;
+  top: 25%;
+  height: 230px;
+  width: 50px;
+  border: 0;
+  border-radius: 8px;
+  background: #8a8a91;
+  color: #fff;
+  writing-mode: vertical-rl;
+  cursor: pointer;
+}
+.living-wall.active {
+  background: repeating-linear-gradient(
+    #2f9d70,
+    #2f9d70 14px,
+    #66bb8d 15px,
+    #66bb8d 24px
+  );
+}
+.street {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 17%;
+  display: grid;
+  place-items: center;
+  background: #6c6c70;
+  color: #fff;
+  letter-spacing: 0.1em;
+}
+.courtyard {
+  position: absolute;
+  z-index: 4;
+  bottom: 18%;
+  left: 25%;
+  right: 20%;
+  height: 18%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5%;
+  border: 2px dashed #2f9d70;
+  background: #e0d7bd;
+}
+.courtyard > span {
+  position: absolute;
+  bottom: 2px;
+  font-size: 10px;
+}
+.tree {
+  border: 0;
+  background: transparent;
+  color: #257953;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.hvac,
+.water-tank {
+  position: absolute;
+  z-index: 5;
+  border: 0;
+  border-radius: 7px;
+  background: #f4f4f5;
+  padding: 8px;
+  font-size: 10px;
+  cursor: pointer;
+}
+.hvac {
+  right: 8%;
+  top: 42%;
+}
+.water-tank {
+  left: 5%;
+  bottom: 22%;
+  color: #3476a8;
+}
+.sensor-dot {
+  position: absolute;
+  z-index: 8;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #6952d5;
+  color: #fff;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+.sensor-dot svg {
+  font-size: 17px;
+}
+.heat-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 12px;
+}
+.heat-legend span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  text-transform: capitalize;
+}
+.heat-legend i {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+.insight-card {
+  margin-top: 18px;
+  background: linear-gradient(130deg, #302174, #6952d5) !important;
+  color: #fff !important;
+}
+.insight-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 16px;
+}
+.insight-grid > div {
+  display: flex;
+  flex-direction: column;
+  padding: 13px;
+  background: #ffffff14;
+  border-radius: 10px;
+}
+.insight-grid small {
+  color: #ffffffaa;
+}
+.twin-charts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 18px;
+}
+.baseline-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 18px;
+}
+.intervention-building {
+  background: #edf8f2 !important;
+  border-color: #81cba3 !important;
+}
+.sensor-workflow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  overflow-x: auto;
+  padding: 24px 0;
+}
+.sensor-workflow > div {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.add-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 18px;
+}
+.fund-twin {
+  background: linear-gradient(135deg, #213d31, #2f9d70) !important;
+  color: #fff !important;
+}
+.fund-points {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 20px 0;
+}
+.fund-twin blockquote {
+  font-size: 1.25rem;
+  border-left: 4px solid #fff;
+  padding-left: 18px;
+  margin-left: 0;
+}
+@media (max-width: 1199.95px) {
+  .twin-main {
+    grid-template-columns: 1fr 1fr;
+  }
+  .twin-center {
+    grid-column: 1/-1;
+    grid-row: 1;
+  }
+  .twin-controls,
+  .twin-results {
+    position: static;
+  }
+  .twin-site {
+    min-height: 540px;
+  }
+}
+@media (max-width: 899.95px) {
+  .twin-main {
+    grid-template-columns: 1fr 1fr;
+  }
+  .insight-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .twin-charts {
+    grid-template-columns: 1fr;
+  }
+  .twin-site {
+    min-height: 500px;
+  }
+}
+@media (max-width: 599.95px) {
+  .twin-hero {
+    grid-template-columns: 1fr;
+    padding: 22px 18px;
+  }
+  .twin-hero h3 {
+    font-size: 2rem;
+  }
+  .twin-hero > .MuiStack-root button {
+    width: 100%;
+  }
+  .twin-main {
+    grid-template-columns: 1fr;
+  }
+  .twin-center {
+    grid-column: auto;
+  }
+  .twin-kpis {
+    grid-template-columns: 1fr 1fr;
+  }
+  .twin-site {
+    min-height: 410px;
+  }
+  .building-grid {
+    left: 18%;
+    right: 12%;
+  }
+  .thermal-zone {
+    min-height: 82px;
+  }
+  .thermal-zone strong {
+    font-size: 1.1rem;
+  }
+  .living-wall {
+    height: 160px;
+    left: 10%;
+  }
+  .courtyard {
+    left: 16%;
+    right: 10%;
+  }
+  .insight-grid,
+  .baseline-split,
+  .fund-points {
+    grid-template-columns: 1fr;
+  }
+  .add-options {
+    grid-template-columns: 1fr;
+  }
+  .sensor-workflow {
+    flex-direction: column;
+    overflow: visible;
+  }
+  .sensor-workflow > div {
+    flex-direction: column;
+  }
+  .sensor-workflow svg {
+    transform: rotate(90deg);
+  }
+}

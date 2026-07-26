@@ -47,6 +47,7 @@ import {
 } from "@mui/material";
 import {
   AssessmentOutlined,
+  AccountTreeOutlined,
   AutoAwesomeOutlined,
   BalanceOutlined,
   Close,
@@ -90,6 +91,7 @@ import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import "./styles.css";
 import ResearchBlueprint from "./ResearchBlueprint";
+import DigitalTwinPage from "./pages/DigitalTwinPage";
 import {
   agents,
   alerts,
@@ -144,6 +146,7 @@ const nav = [
   ["Stakeholders", "/stakeholders", <GroupsOutlined />],
   ["Project Information", "/project", <InfoOutlined />],
   ["Research Blueprint", "/research", <ScienceOutlined />],
+  ["Digital Twin", "/digital-twin", <AccountTreeOutlined />],
 ] as const;
 const tempTrend = [
   { t: "06:00", temp: 22, feel: 22 },
@@ -1810,6 +1813,7 @@ function ResponsiveAppLayout() {
           <Route path="/stakeholders" element={<Stakeholders />} />
           <Route path="/project" element={<Project />} />
           <Route path="/research" element={<ResearchBlueprint />} />
+          <Route path="/digital-twin" element={<DigitalTwinPage />} />
         </Routes>
         <Typography className="footer" variant="caption">
           OPTICOOL · University innovation prototype · No live AI, sensor or
